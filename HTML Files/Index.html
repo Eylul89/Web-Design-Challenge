@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a68967e250.js" crossorigin="anonymous"></script>
+
+    <!--Google Fonts -->
+
+    <link href="https://fonts.googleapis.com/css?family=Candal|Lora&display=swap" rel="stylesheet">
+
+    <!-- Custom Styling -->
+    <link rel="stylesheet" href="css/style.css">
+    
+
+    <title>Blog</title>
+</head>
+
+<body>
+    <header>
+        <!-- Navigation Bar-->
+        <div class="logo">
+            <h1 class = 'logo-text'> <span>Eylul</span> Analytica</h1>
+        </div>
+        <i class="fa fa-bars menu-toggle"></i>
+        <!-- Menu Icon -->
+        <ul class="nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <!-- <li><a href="#">Sign Up"</a></li>
+            <li><a href="#">Login"</a></li> -->
+            <li>
+                <a href="#">
+                    <i class="fa fa-user"></i>
+                    Eylul Taskin
+                    <i class="fa fa-chevron-down" style="font-size: .8em;"></i>
+                </a>
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#" class="Logout">Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+
+
+
+    </header>
+    <!-- Page Wrapper-->
+    <div class="page-wrapper">
+
+        <!-- Post Slider -->
+        <div class="post-slider">
+            <h1 class="slider-title"> Trending Posts </h1>
+            <i class="fas fa-chevron-left prev"></i>
+            <i class="fas fa-chevron-right next"></i>
+
+            <div class="post-wrapper">
+             <div class="post">
+                <img src="html hw visuals/Figures_Cloudiness_vs_Latitude.png" alt="" class="slider-image">
+                <div class="post-info">
+                 <h4><a href="single.html">Cloudiness vs Latitude</a></h4>
+                 <i class="far fa-user">Eylul Taskin</i>
+                 &nbsp;
+                <i class="far fa-calendar">Mar 28, 2020</i>
+               </div>
+             </div>
+         </div>
+
+        </div>
+        <!-- // Post Slider -->
+
+    </div>
+     <!-- // Page Wrapper-->
+
+
+
+<!-- JQuery-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+  
+    
+    <script>
+        $(document).ready(function(){
+                $('.menu-toggle').on('click', function(){           
+                $('.nav').toggleClass('showing');
+                $('.nav ul').toggleClass('showing');
+            });
+        });
+    </script>
+
+<!-- Slick Carousel-->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+				
+    <script>
+         $('.post-wrapper').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                nextArrow: $('.next'),
+                prevArrow: $('.prev'),
+            });
+</script>
+
+
+<!-- Slick Carousel // -->
+
+
+
+<!--Custom Script-->
+<script src="js/script.js"></script>
+
+</body>
+</html>
